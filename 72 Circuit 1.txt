@@ -1,0 +1,7 @@
+connection 2, connection 2, connection 2, connection 2, connection 2, connection 2, connection 2, 
+dskew 1, dskew 1, dskew 1, dskew 1, dskew 1, dskew 1, dskew 1, 
+connection 0, connection 0, connection 0, connection 0, connection 0, connection 0, connection 0, 
+component 0, component 0, component 0, component 0, component 0, component 0, component 0, 
+component 0, component 0, component 0, component 0, component 0, component 0, component 0, 
+component 0, component 0, component 0, component 0, component 0, component 0, component 0, 
+component 0, component 0, component 0, component 0, component 0, component 0, component 0, 

@@ -1,0 +1,28 @@
+Beginning with the function Main(), it is clear that the single responsability principle is not strictly
+followed. In this function we can see that reading (from the samples.xml file), decission making (whether
+to process an <Overlapping model> or a <Simple tiled model>), logging, file writing and setup for the
+rest of the processing is all done with no clear separation of the various tasks.
+
+Moving on to the OverlappingModel class, we can spot a small improvement with respect to SRP. The author
+has split the workload into 4 functions (the constructor, OnBoundary, Graphics and Clear). However,
+this does not help much towards code readability, as the naming scheme chosen gets in the way.
+For example, the variables named <N>, <SMX>, <SMY>, <T>, <ps> or <C> have to be looked up repeatedly in
+order to keep track of them. Also, we see the use of inner functions within the constructor. These get
+in the way when one tries to pay attention to the flow of the function.
+Another bad aspect about these inner functions is also their name. <pattern>, <index>, <patternFromIndex>,
+and <agrees> are unintuitive names which do no provide much insight to what they achieve. Coupled with
+one letter parameters like <f>, <p>, <p1> and <p2>, they straight up confuse the reader.
+
+One other noticeable aspect that can be seen up to here is the lack of comments. Not only is the
+documentation missing completely, but also comments that should notify the reader what a particular
+piece of code tries to achieve. For example, at a first glance, we cannot be sure whether the code treats
+corner cases if at all.
+
+In the class SimpleTiledModel we can find a constructor with a staggering 176 lines of code. And also
+a dangerous pitfall, which is the lack of constants for hard coded strings and numbers.
+
+Next we have the class named <Stuff> which really should be named <Utils> as it contains just that:
+functions like Random and Power or extension functions.
+
+To sum it all up, although the end product is impresive in what it achieves, it has a long way to go in
+terms of refactoring before it can be regarded as an end product.
